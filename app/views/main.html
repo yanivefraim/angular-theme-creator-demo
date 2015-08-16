@@ -5,28 +5,26 @@
         <h3 class="panel-title">Edit your Theme</h3>
       </div>
       <div class="panel-body">
-        <form class="form-horizontal">
-          <div class="control-group">
-            <label class="control-label" for="inputPassword">Font Family</label>
-            <div class="controls">
-              <select class="form-control" ng-model="ctrl.fontFamily">
-                <option value="Helvetica">Helvetica</option>
-              </select>
-            </div>
+        <div class="control-group">
+          <label class="control-label" for="inputPassword">Font Family</label>
+          <div class="controls">
+            <select class="form-control" ng-model="ctrl.fontFamily">
+              <option value="Helvetica">Helvetica</option>
+            </select>
           </div>
-          <div class="control-group">
-            <label class="control-label" for="fontColor">Font Color</label>
-            <div class="controls">
-              <input id="fontColor" class="form-control" name="fontColor" ng-model="ctrl.fontColor" placeholder="#nnnnnn or <color-name>" />
-            </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="fontColor">Font Color</label>
+          <div class="controls">
+            <input id="fontColor" class="form-control" name="fontColor" ng-model="ctrl.fontColor" placeholder="#nnnnnn or <color-name>" />
           </div>
-          <div class="control-group">
-            <label class="control-label" for="fontSize">Font Size</label>
-            <div class="controls">
-              <input id="fontColor" class="form-control" type="number" name="fontSize" ng-model="ctrl.fontSize" />
-            </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="fontSize">Font Size</label>
+          <div class="controls">
+            <input id="fontColor" class="form-control" type="number" name="fontSize" ng-model="ctrl.fontSize" />
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
