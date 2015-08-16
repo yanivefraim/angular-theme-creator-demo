@@ -10,7 +10,10 @@
  */
 angular
   .module('themeCreatorDemoApp', [
-    'ngRoute'
+    'ngRoute',
+    'themeCreatorComponentModule',
+    'themeEditorPanelComponentModule',
+    'themePreviewPanelComponentModule'
   ])
   .config(function ($routeProvider) {
     $routeProvider
