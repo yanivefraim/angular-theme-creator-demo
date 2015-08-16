@@ -9,4 +9,5 @@
  */
 angular.module('themeCreatorDemoApp')
   .controller('MainCtrl', function () {
+    this.fontSize = 16;
   });
