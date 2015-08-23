@@ -2,8 +2,19 @@
 
 angular
   .module('themeCreatorComponentModule', [])
-  .directive('themeCreatorComponent', function() {
+  .directive('themeCreatorComponent', function($timeout) {
     return {
-      templateUrl: 'views/theme-creator-component.html'
+      templateUrl: 'views/theme-creator-component.html',
+      scope: {},
+      bindToController: {
+        fontSize: "@"
+      },
+      controllerAs: 'ctrl',
+      controller: function() {
+        var that = this;
+        this.onEditChange = function (fontSize) {
+          that.fontSize = fontSize;
+        };
+      },
     };
   });

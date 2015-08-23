@@ -15,6 +15,6 @@
 <div class="control-group">
   <label class="control-label" for="fontSize">Font Size</label>
   <div class="controls">
-    <input id="fontColor" class="form-control" type="number" name="fontSize" ng-model="ctrl.fontSize" />
+    <font-size-component font-size="{{ctrl.fontSize}}" font-size-changed="ctrl.onChange(fontSize)"></font-size-component>
   </div>
 </div>
