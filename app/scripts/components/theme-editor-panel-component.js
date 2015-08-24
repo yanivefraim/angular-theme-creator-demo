@@ -1,13 +1,15 @@
 'use strict';
 
 angular
-  .module('themeEditorPanelComponentModule', ['themeCreatorFontSizeComponentModule'])
+  .module('themeEditorPanelComponentModule', ['themeCreatorFontSizeComponentModule', 'themeCreatorFontColorComponentModule'])
   .directive('themeEditorPanelComponent', function() {
     return {
       templateUrl: 'views/theme-editor-panel-component.html',
       scope: {},
       bindToController: {
-        fontSize: "=",
+        fontSize: "@",
+        fontFamily: "@",
+        color: "@",
         onEditChange: "&"
       },
       controller: function() {

@@ -4,7 +4,7 @@ angular
   .module('themeCreatorFontSizeComponentModule', [])
   .directive('fontSizeComponent', function() {
     return {
-      template: '<input id="fontColor" class="form-control" type="number" name="fontSize" value="{{ctrl.fontSize}}" ng-keyup="ctrl.fontSizeChangedEvent()"/>',
+      template: '<input id="fontSize" class="form-control" type="number" name="fontSize" value="{{ctrl.fontSize}}" ng-keyup="ctrl.fontSizeChangedEvent()"/>',
 
       scope: {},
       bindToController: {
