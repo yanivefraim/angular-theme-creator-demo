@@ -7,15 +7,21 @@ angular
       templateUrl: 'views/theme-editor-panel-component.html',
       scope: {},
       bindToController: {
-        fontSize: "@",
-        fontFamily: "@",
-        color: "@",
-        onEditChange: "&"
+        fontSize: '@',
+        fontFamily: '@',
+        fontColor: '@',
+        onFontColorChange: '&',
+        onFontSizeChange: '&'
+
       },
       controller: function() {
         var that = this;
-        this.onChange = function (fontSize) {
-          that.onEditChange({fontSize: fontSize});
+        this.onFontSizeChangeEvent = function (fontSize) {
+          that.onFontSizeChange({fontSize: fontSize});
+        };
+
+        this.onFontColorChangeEvent = function (fontColor) {
+          that.onFontColorChange({fontColor: fontColor});
         };
       },
       controllerAs: 'ctrl',

@@ -7,13 +7,18 @@ angular
       templateUrl: 'views/theme-creator-component.html',
       scope: {},
       bindToController: {
-        fontSize: "@"
+        fontSize: "@",
+        fontColor: "@"
       },
       controllerAs: 'ctrl',
       controller: function() {
         var that = this;
-        this.onEditChange = function (fontSize) {
+        this.onFontSizeChange = function (fontSize) {
           that.fontSize = fontSize;
+        };
+
+        this.onFontColorChange = function (fontColor) {
+          that.fontColor = fontColor;
         };
       },
     };

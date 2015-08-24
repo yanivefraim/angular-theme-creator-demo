@@ -9,12 +9,13 @@
 <div class="control-group">
   <label class="control-label" for="fontColor">Font Color</label>
   <div class="controls">
-    <input id="fontColor" class="form-control" name="fontColor" ng-model="ctrl.fontColor" placeholder="#nnnnnn or <color-name>" />
+    <font-color-component font-color="{{ctrl.fontColor}}" font-color-changed="ctrl.onFontColorChangeEvent(fontColor)"></font-color-component>
+    <!-- <input id="fontColor" class="form-control" name="fontColor" ng-model="ctrl.fontColor" placeholder="#nnnnnn or <color-name>" /> -->
   </div>
 </div>
 <div class="control-group">
   <label class="control-label" for="fontSize">Font Size</label>
   <div class="controls">
-    <font-size-component font-size="{{ctrl.fontSize}}" font-size-changed="ctrl.onChange(fontSize)"></font-size-component>
+    <font-size-component font-size="{{ctrl.fontSize}}" font-size-changed="ctrl.onFontSizeChangeEvent(fontSize)"></font-size-component>
   </div>
 </div>

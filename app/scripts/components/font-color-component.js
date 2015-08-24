@@ -4,19 +4,18 @@ angular
   .module('themeCreatorFontColorComponentModule', [])
   .directive('fontColorComponent', function() {
     return {
-      template: '<input id="fontColor" class="form-control" name="fontColor" value="{{ctrl.fontColor}}" ng-keyup="ctrl.fontColorChangedEvent()"/>',
+      template: '<input id="fontColor" class="form-control" name="fontColor" ng-model="ctrl.fontColor" ng-change="ctrl.fontColorChangedEvent()"/>',
 
       scope: {},
       bindToController: {
-        fontColor: "@",
-        fontColorChanged: "&"
+        fontColor: '@',
+        fontColorChanged: '&'
       },
       controllerAs: 'ctrl',
-      controller: function($scope, $element) {
+      controller: function() {
         var that = this;
         this.fontColorChangedEvent = function() {
-          var elementVal = $element.find('input').val(); //TODO: find better implementation here
-          that.fontColorChanged({fontSize: elementVal});
+          that.fontColorChanged({fontColor: that.fontColor});
         };
       }
     };
