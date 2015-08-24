@@ -13,8 +13,8 @@ angular
       controller: function($scope) {
         var that = this;
         //TODO: refactor this hack
-        var style = "font-family: ctrl.fontFamily; color: {{ctrl.fontColor}}; font-size: {{ctrl.fontSize}}px;";
-        $scope.$watch('ctrl.fontSize + ctrl.fontColor', function () {
+        var style = "font-family: {{ctrl.fontFamily}}; color: {{ctrl.fontColor}}; font-size: {{ctrl.fontSize}}px;";
+        $scope.$watch('ctrl.fontSize + ctrl.fontColor + ctrl.fontFamily', function () {
           that.styleProp = $interpolate(style)($scope);
         });
       },

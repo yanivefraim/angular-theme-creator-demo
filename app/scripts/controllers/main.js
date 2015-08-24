@@ -10,4 +10,6 @@
 angular.module('themeCreatorDemoApp')
   .controller('MainCtrl', function () {
     this.fontSize = 16;
+    this.fontColor = '#aaaaaa';
+    this.fontFamily = 'Helvetica';
   });

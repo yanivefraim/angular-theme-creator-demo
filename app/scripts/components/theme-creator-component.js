@@ -7,8 +7,9 @@ angular
       templateUrl: 'views/theme-creator-component.html',
       scope: {},
       bindToController: {
-        fontSize: "@",
-        fontColor: "@"
+        fontSize: '@',
+        fontColor: '@',
+        fontFamily: '@'
       },
       controllerAs: 'ctrl',
       controller: function() {
@@ -19,6 +20,10 @@ angular
 
         this.onFontColorChange = function (fontColor) {
           that.fontColor = fontColor;
+        };
+
+        this.onFontFamilyChange = function (fontFamily) {
+          that.fontFamily = fontFamily;
         };
       },
     };

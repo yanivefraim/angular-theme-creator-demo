@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('themeEditorPanelComponentModule', ['themeCreatorFontSizeComponentModule', 'themeCreatorFontColorComponentModule'])
+  .module('themeEditorPanelComponentModule', ['themeCreatorFontSizeComponentModule', 'themeCreatorFontColorComponentModule', 'themeCreatorFontFamilyComponentModule'])
   .directive('themeEditorPanelComponent', function() {
     return {
       templateUrl: 'views/theme-editor-panel-component.html',
@@ -11,7 +11,8 @@ angular
         fontFamily: '@',
         fontColor: '@',
         onFontColorChange: '&',
-        onFontSizeChange: '&'
+        onFontSizeChange: '&',
+        onFontFamilyChange: '&'
 
       },
       controller: function() {
@@ -22,6 +23,10 @@ angular
 
         this.onFontColorChangeEvent = function (fontColor) {
           that.onFontColorChange({fontColor: fontColor});
+        };
+
+        this.onFontFamilyChangeEvent = function (fontColor) {
+          that.onFontFamilyChange({fontFamily: fontFamily});
         };
       },
       controllerAs: 'ctrl',
