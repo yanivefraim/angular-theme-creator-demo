@@ -2,7 +2,7 @@
 
 angular
   .module('themeCreatorComponentModule', [])
-  .directive('themeCreatorComponent', function($timeout) {
+  .directive('themeCreatorComponent', function() {
     return {
       templateUrl: 'views/theme-creator-component.html',
       scope: {},

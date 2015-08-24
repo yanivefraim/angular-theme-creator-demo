@@ -14,7 +14,7 @@ angular
       },
       controller: function() {
         var that = this;
-        this.onChange = function (fontSize) {debugger;
+        this.onChange = function (fontSize) {
           that.onEditChange({fontSize: fontSize});
         };
       },

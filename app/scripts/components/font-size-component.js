@@ -4,19 +4,17 @@ angular
   .module('themeCreatorFontSizeComponentModule', [])
   .directive('fontSizeComponent', function() {
     return {
-      template: '<input id="fontSize" class="form-control" type="number" name="fontSize" value="{{ctrl.fontSize}}" ng-keyup="ctrl.fontSizeChangedEvent()"/>',
-
+      template: '<input id="fontSize" class="form-control" name="fontSize" ng-model="ctrl.fontSize" ng-change="ctrl.fontSizeChangedEvent()"/>',
       scope: {},
       bindToController: {
         fontSize: "@",
         fontSizeChanged: "&"
       },
       controllerAs: 'ctrl',
-      controller: function($scope, $element) {
+      controller: function() {
         var that = this;
         this.fontSizeChangedEvent = function() {
-          var elementVal = $element.find('input').val(); //TODO: find better implementation here
-          that.fontSizeChanged({fontSize: elementVal});
+          that.fontSizeChanged({fontSize: that.fontSize});
         };
       }
     };
