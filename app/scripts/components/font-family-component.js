@@ -5,9 +5,6 @@ angular
   .directive('fontFamilyComponent', function() {
     return {
       template: '<select class="form-control" ng-model="ctrl.fontFamily" ng-change="ctrl.fontFamilyChangedEvent()" ng-options="item for item in ctrl.items">',
-      // template: '<select class="form-control" ng-model="ctrl.fontFamily" ng-change="ctrl.fontFamilyChangedEvent()">'+
-      //           +'<option value="Helvetica">Helvetica</option>'+
-      //           +'</select>',
       scope: {},
       bindToController: {
         fontFamily: "@",
