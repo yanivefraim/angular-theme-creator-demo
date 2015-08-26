@@ -8,7 +8,8 @@ angular
       scope: {},
       bindToController: {
         fontSize: '@',
-        fontColor: '@'
+        fontColor: '@',
+        fontFamily: '@'
       },
       controller: function($scope) {
         var that = this;

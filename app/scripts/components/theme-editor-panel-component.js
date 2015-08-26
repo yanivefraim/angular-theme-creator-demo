@@ -25,7 +25,7 @@ angular
           that.onFontColorChange({fontColor: fontColor});
         };
 
-        this.onFontFamilyChangeEvent = function (fontColor) {
+        this.onFontFamilyChangeEvent = function (fontFamily) {
           that.onFontFamilyChange({fontFamily: fontFamily});
         };
       },
