@@ -8,9 +8,7 @@
         <div class="control-group">
           <label class="control-label" for="inputPassword">Font Family</label>
           <div class="controls">
-            <select class="form-control" ng-model="ctrl.fontFamily">
-              <option value="Helvetica">Helvetica</option>
-            </select>
+            <select class="form-control" ng-model="ctrl.fontFamily" ng-options="font for font in ctrl.fonts" />
           </div>
         </div>
         <div class="control-group">
