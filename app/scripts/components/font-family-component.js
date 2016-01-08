@@ -2,7 +2,7 @@
 
 angular
   .module('themeCreatorFontFamilyComponentModule', [])
-  .directive('fontFamilyComponent', function() {
+  .directive('fontFamilyComponent', function(dataService) {
     return {
       template: '<select class="form-control" ng-model="ctrl.fontFamily" ng-change="ctrl.fontFamilyChangedEvent()" ng-options="font for font in ctrl.fonts">',
       scope: {},
@@ -12,7 +12,7 @@ angular
       },
       controllerAs: 'ctrl',
       controller: function() {
-        this.fonts = ['Helvetica','Ariel', 'fantasy','cursive'];
+        this.fonts = dataService.getFontFamilyTypes(); //['Helvetica','Ariel', 'fantasy','cursive'];
         var that = this;
         this.fontFamilyChangedEvent = function() {
           that.fontFamilyChanged({fontFamily: that.fontFamily});
