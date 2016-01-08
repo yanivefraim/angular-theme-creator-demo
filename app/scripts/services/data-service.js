@@ -15,5 +15,7 @@ angular.module('themeCreatorDemoApp')
     service.getFontFamilyTypes = function() {
       return ['Helvetica','Ariel', 'fantasy','cursive'];
     }
+
+    return service;
     // AngularJS will instantiate a singleton by calling "new" on this function
   });
