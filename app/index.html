@@ -49,10 +49,17 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
+    <script src="/node_modules/systemjs/dist/system.src.js"></script>
+    <script src="/node_modules/angular2/bundles/angular2-polyfills.min.js"></script>
+
+    <script src="/node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="/node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="/node_modules/angular2/bundles/upgrade.dev.js"></script>
+    <script src="/node_modules/angular2/bundles/http.dev.js"></script>
+    <script src="/node_modules/angular2/bundles/router.dev.js"></script>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/node_modules/systemjs/dist/system.src.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
@@ -68,8 +75,6 @@
     <script src="scripts/components/theme-preview-panel-component.js"></script>
     <script src="scripts/components/font-size-component.js"></script>
     <script src="scripts/components/font-color-component.js"></script>
-    <script src="scripts/components/font-family-component.js"></script>
-    <script src="scripts/services/data-service.js"></script>
     <!-- endbuild -->
 
     <script>

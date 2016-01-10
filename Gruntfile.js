@@ -238,7 +238,7 @@ module.exports = function (grunt) {
         src: ['test/spec/{,*/}*.ts', 'test/e2e/{,*/}*.ts'],
           dest: '.tmp/spec',
           options: {
-          module: 'amd', //or commonjs
+          module: 'commonjs', //or commonjs
             target: 'es5', //or es3
             sourcemap: true,
             declaration: true

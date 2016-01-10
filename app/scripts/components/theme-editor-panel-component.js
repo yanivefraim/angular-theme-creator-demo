@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('themeEditorPanelComponentModule', ['themeCreatorFontSizeComponentModule', 'themeCreatorFontColorComponentModule', 'themeCreatorFontFamilyComponentModule'])
+  .module('themeEditorPanelComponentModule', ['themeCreatorFontSizeComponentModule', 'themeCreatorFontColorComponentModule'])
   .directive('themeEditorPanelComponent', function() {
     return {
       templateUrl: 'views/theme-editor-panel-component.html',
