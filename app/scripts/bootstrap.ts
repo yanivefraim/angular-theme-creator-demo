@@ -2,7 +2,6 @@ declare var angular: any;
 
 import {UpgradeAdapter} from 'angular2/upgrade';
 import {FontFamilyComponent} from './components/font-family-component';
-import {DataService} from './services/data-service';
 
 let adapter = new UpgradeAdapter();
 
