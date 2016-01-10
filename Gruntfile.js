@@ -84,6 +84,10 @@ module.exports = function (grunt) {
                 connect.static('./bower_components')
               ),
               connect().use(
+                 '/node_modules',
+                 connect.static('./node_modules')
+              ),
+              connect().use(
                 '/app/styles',
                 connect.static('./app/styles')
               ),
@@ -215,14 +219,14 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
       }
-    }, 
+    },
     // Compiles TypeScript to JavaScript
     typescript: {
       base: {
         src: ['<%= yeoman.app %>/scripts/{,*/}*.ts'],
           dest: '.tmp/scripts',
           options: {
-          module: 'amd', //or commonjs
+          module: 'commonjs', //or commonjs
             target: 'es5', //or es3
             'base_path': '<%= yeoman.app %>/scripts', //quoting base_path to get around jshint warning.
             sourcemap: true,
@@ -249,7 +253,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    
+
 
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
