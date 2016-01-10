@@ -1,4 +1,17 @@
-'use strict';
+
+class FontFamilyComponent {
+  fonts: string[];
+  fontFamilyChanged: Function;
+  fontFamily: string;
+
+  constructor(dataService: any) {
+    this.fonts = dataService.getFontFamilyTypes();
+  }
+
+  fontFamilyChangedEvent() {
+    this.fontFamilyChanged({fontFamily: this.fontFamily});
+  }
+}
 
 angular
   .module('themeCreatorFontFamilyComponentModule', [])
@@ -11,12 +24,6 @@ angular
         fontFamilyChanged: "&"
       },
       controllerAs: 'ctrl',
-      controller: function() {
-        this.fonts = dataService.getFontFamilyTypes(); //['Helvetica','Ariel', 'fantasy','cursive'];
-        var that = this;
-        this.fontFamilyChangedEvent = function() {
-          that.fontFamilyChanged({fontFamily: that.fontFamily});
-        };
-      }
+      controller: FontFamilyComponent
     };
   });
