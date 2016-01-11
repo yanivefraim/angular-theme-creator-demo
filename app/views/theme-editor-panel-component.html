@@ -1,14 +1,16 @@
 <div class="control-group">
   <label class="control-label">Font Family</label>
   <div class="controls">
+    <!-- NG1 -->
     <font-family-component font-family="{{ctrl.fontFamily}}" font-family-changed="ctrl.onFontFamilyChangeEvent(fontFamily)"></font-family-component>
+    <!-- NG2 -->
+    <!-- <font-family-component [font-family]="ctrl.fontFamily" (font-family-changed)="ctrl.onFontFamilyChangeEvent($event)"></font-family-component> -->
   </div>
 </div>
 <div class="control-group">
   <label class="control-label" for="fontColor">Font Color</label>
   <div class="controls">
     <font-color-component font-color="{{ctrl.fontColor}}" font-color-changed="ctrl.onFontColorChangeEvent(fontColor)"></font-color-component>
-    <!-- <input id="fontColor" class="form-control" name="fontColor" ng-model="ctrl.fontColor" placeholder="#nnnnnn or <color-name>" /> -->
   </div>
 </div>
 <div class="control-group">

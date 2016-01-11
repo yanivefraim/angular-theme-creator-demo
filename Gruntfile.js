@@ -230,7 +230,8 @@ module.exports = function (grunt) {
             target: 'es5', //or es3
             'base_path': '<%= yeoman.app %>/scripts', //quoting base_path to get around jshint warning.
             sourcemap: true,
-            declaration: true
+            declaration: true,
+            experimentalDecorators: true
         }
       },
       test: {
