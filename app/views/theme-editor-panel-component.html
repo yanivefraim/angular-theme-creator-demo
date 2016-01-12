@@ -2,9 +2,9 @@
   <label class="control-label">Font Family</label>
   <div class="controls">
     <!-- NG1 -->
-    <font-family-component font-family="{{ctrl.fontFamily}}" font-family-changed="ctrl.onFontFamilyChangeEvent(fontFamily)"></font-family-component>
+    <!-- <font-family-component font-family="{{ctrl.fontFamily}}" font-family-changed="ctrl.onFontFamilyChangeEvent(fontFamily)"></font-family-component> -->
     <!-- NG2 -->
-    <!-- <font-family-component [font-family]="ctrl.fontFamily" (font-family-changed)="ctrl.onFontFamilyChangeEvent($event)"></font-family-component> -->
+    <font-family-component [font-family]="ctrl.fontFamily" (font-family-changed)="ctrl.onFontFamilyChangeEvent($event)"></font-family-component>
   </div>
 </div>
 <div class="control-group">

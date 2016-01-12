@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="themeCreatorDemoApp">
+  <body>
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -51,13 +51,13 @@
     </script>
 
     <!-- NG2 -->
-    <!--<script src="/node_modules/systemjs/dist/system.src.js"></script>
+    <script src="/node_modules/systemjs/dist/system.src.js"></script>
     <script src="/node_modules/angular2/bundles/angular2-polyfills.min.js"></script>
     <script src="/node_modules/rxjs/bundles/Rx.js"></script>
     <script src="/node_modules/angular2/bundles/angular2.dev.js"></script>
     <script src="/node_modules/angular2/bundles/upgrade.dev.js"></script>
     <script src="/node_modules/angular2/bundles/http.dev.js"></script>
-    <script src="/node_modules/angular2/bundles/router.dev.js"></script> -->
+    <script src="/node_modules/angular2/bundles/router.dev.js"></script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -75,12 +75,12 @@
     <script src="scripts/components/theme-preview-panel-component.js"></script>
     <script src="scripts/components/font-size-component.js"></script>
     <script src="scripts/components/font-color-component.js"></script>
-    <script src="scripts/services/data-service.js"></script>
-    <script src="scripts/components/font-family-component.js"></script>
+    <!-- <script src="scripts/services/data-service.js"></script>
+    <script src="scripts/components/font-family-component.js"></script> -->
     <!-- endbuild -->
 
     <!-- NG2 -->
-    <!-- <script>
+    <script>
      System.config({
        packages: {
          scripts: {
@@ -92,6 +92,6 @@
 
      System.import('scripts/bootstrap.js').then(null, console.error.bind(console));
 
-   </script> -->
+   </script>
 </body>
 </html>

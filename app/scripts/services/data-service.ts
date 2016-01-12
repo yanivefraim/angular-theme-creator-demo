@@ -4,8 +4,7 @@ declare var angular: any;
 //import {Injectable} from 'angular2/core';
 
 //@Injectable()
-//export
-class DataService {
+export class DataService {
   getFontFamilyTypes() {
     return ['Helvetica','Ariel', 'fantasy','cursive'];
   }
