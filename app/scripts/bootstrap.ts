@@ -1,8 +1,9 @@
-//NG2
+// //NG2
 // declare var angular: any;
 //
 // import {UpgradeAdapter} from 'angular2/upgrade';
 // import {FontFamilyComponent} from './components/font-family-component';
+// import {DataService} from "./services/data-service";
 //
 // let adapter = new UpgradeAdapter();
 //
@@ -11,5 +12,7 @@
 //   .directive('fontFamilyComponent', adapter.downgradeNg2Component(FontFamilyComponent));
 //
 // adapter.upgradeNg1Provider('dataService');
+//
+// adapter.addProvider(DataService);
 //
 // adapter.bootstrap(document.body, ['themeCreatorDemoApp']);
